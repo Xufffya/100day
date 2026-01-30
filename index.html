@@ -1,0 +1,80 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的100天</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <!-- 添加这些让手机体验更好 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <!-- 开场文字动画 -->
+    <div class="intro-screen" id="introScreen">
+        <div class="text-container">
+            <div class="text-line active" id="line1">缘分的神奇,不只是轻率地将某人推至眼前</div>
+            <div class="text-line" id="line2">也许真正的奇迹是——当理性近乎铜墙铁壁,却意外出现了一个让你动摇的身影</div>
+            <div class="text-line" id="line3">即使无法仓促相信,但,对方慷慨地给予你漫长的时间与充分的证据,容你反复审视,层层推敲</div>
+        </div>
+        <div class="instruction">点击屏幕继续</div>
+    </div>
+
+    <!-- 主日历页面 -->
+    <div class="main-container" id="mainContainer">
+        <header class="header">
+            <h1>100</h1>
+            <div class="subtitle">点击数字</div>
+        </header>
+
+        <div class="calendar-grid" id="calendarGrid">
+            <!-- 1-100个圆圈按钮将通过JS动态生成 -->
+        </div>
+
+       <!-- 天详情模态框 -->
+<div class="day-modal" id="dayModal">
+    <div class="modal-content">
+        <button class="close-modal" id="closeModal">×</button>
+        <h2 class="day-title" id="dayTitle">第 <span id="dayNumber">1</span> 天</h2>
+        
+        <!-- 新增照片区域 -->
+        <div class="photo-container" id="photoContainer">
+            <!-- 照片将在这里显示 -->
+        </div>
+        
+        <div class="memory-content" id="memoryContent">
+            这里显示每一天的回忆...
+        </div>
+        <div class="modal-nav">
+            <button class="nav-btn" id="prevDayBtn">← 前一天</button>
+            <button class="nav-btn" id="nextDayBtn">后一天 →</button>
+        </div>
+    </div>
+</div>
+
+        <!-- 第100天评论区 -->
+<div class="comments-modal" id="commentsModal">
+    <div class="comments-content">
+        <button class="close-comments" id="closeComments">×</button>
+        <h2>留言</h2>
+        <div class="comments-list" id="commentsList">
+            <!-- 评论将通过JS动态生成 -->
+        </div>
+        <div class="comment-form">
+            <textarea id="commentInput" placeholder="写下你想说的话..."></textarea>
+            <button id="submitComment">发送</button>
+        </div>
+    </div>
+</div>
+        <footer class="footer">
+            <p>© 我们的100天纪念</p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="comments.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
